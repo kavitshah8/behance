@@ -1,0 +1,24 @@
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="col-md-3">
+			<table class="table">
+				<thead>
+					<tr><th>Projects</th></tr>
+				</thead>
+
+				{{#each item in content}}
+					<tr>
+						<td>
+							{{#link-to 'projects.project-id' item.id}}
+								{{item.name}}
+							{{/link-to}}
+						</td>
+					</tr>	
+				{{/each}}
+			</table>
+		</div>
+		<div class="col-md-8 col-md-offset-1">
+			{{outlet}}
+		</div>
+	</div>
+</div>

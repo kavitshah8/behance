@@ -13,6 +13,16 @@ module.exports = function(environment) {
       }
     },
 
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self' 'unsafe-eval' https://api.behance.net/v2/ ",
+      'font-src': "'self'",
+      'connect-src': "'self'",
+      'img-src': "'self' https://mir-s3-cdn-cf.behance.net/projects/ https://mir-cdn-ak.behance.net/v1/",
+      'style-src': "'self'",
+      'media-src': "'self'"
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
