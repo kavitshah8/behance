@@ -11,11 +11,11 @@ describeModule( 'route:projects/project-id', 'ProjectsProjectIdRoute', function(
 
   it('testing setupController hook', function() {
   	var route = this.subject();
-		var mock = sinon.mock( route );
+  	var mock = sinon.mock( route );
   	mock.expects('setupController');
-		route.setupController();
-		mock.verify();
-		mock.restore();
+  	route.setupController();
+  	mock.verify();
+  	mock.restore();
   });
 
 });

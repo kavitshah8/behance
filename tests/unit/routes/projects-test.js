@@ -4,15 +4,13 @@ import { describeModule, it } from 'ember-mocha';
 
 describeModule( 'route:projects', 'ProjectsRoute', function() {
 
-	var route;
-  	
   it('exists', function() {
   	var route = this.subject();
-    expect(route).to.be.ok;
+  	expect(route).to.be.ok;
   });
-	
-	it('testing model hoook', function() {
-  	var route = this.subject();
+
+  it('testing model hoook', function() {
+		var route = this.subject();
 		var mock = sinon.mock( route );
 		mock.expects('model');
 		route.model();
@@ -20,4 +18,4 @@ describeModule( 'route:projects', 'ProjectsRoute', function() {
 		mock.restore();
 	});
 
-  });
+});
