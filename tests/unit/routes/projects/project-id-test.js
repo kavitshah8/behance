@@ -9,4 +9,13 @@ describeModule( 'route:projects/project-id', 'ProjectsProjectIdRoute', function(
     expect(route).to.be.ok;
   });
 
+  it('testing setupController hook', function() {
+  	var route = this.subject();
+		var mock = sinon.mock( route );
+  	mock.expects('setupController');
+		route.setupController();
+		mock.verify();
+		mock.restore();
+  });
+
 });
