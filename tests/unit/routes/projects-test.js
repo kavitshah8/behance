@@ -1,20 +1,21 @@
+/* jshint expr:true */
+import { expect } from 'chai';
 import {
-  moduleFor,
-  test
-} from 'ember-qunit';
+  describeModule,
+  it
+} from 'ember-mocha';
 
-moduleFor('route:projects', {
-  // Specify the other units that are required for this test.
-  // needs: ['controller:foo']
-});
-
-test('it exists', function(assert) {
-  var route = this.subject();
-  assert.ok(route);
-});
-
-test('First Test', function(assert) {
-  var route = this.subject();
-  assert.ok(route.model());
-  // assert.equal(route.model(),{});
-});
+describeModule(
+  'route:projects',
+  'ProjectsRoute',
+  {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  },
+  function() {
+    it('exists', function() {
+      var route = this.subject();
+      expect(route).to.be.ok;
+    });
+  }
+);

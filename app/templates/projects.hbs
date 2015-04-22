@@ -9,7 +9,8 @@
 				{{#each item in content}}
 					<tr>
 						<td>
-							{{#link-to 'projects.project-id' item.id}}
+							{{!-- {{#link-to 'projects.project-id' item.id}} --}}
+							{{#link-to 'projects.project-id' item}}
 								{{item.name}}
 							{{/link-to}}
 						</td>
