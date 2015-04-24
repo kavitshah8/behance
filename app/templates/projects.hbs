@@ -1,23 +1,25 @@
 <div class="container-fluid">
 	<div class="row-fluid">
 		<div class="col-md-3">
-			<table class="table">
-				<thead>
-					<tr><th>Projects</th></tr>
-				</thead>
+			<div class="panel panel-primary">
+					<div class="panel-heading">
+						<div class="panel-title">
+								Projects
+						</div>
+					</div>
 
-				{{#each item in content}}
-					<tr>
-						<td>
+					<div class="panel-body">
+						{{#each item in content}}
+							<div>
 							{{#link-to 'projects.project-id' item.id}}
 								{{item.name}}
 							{{/link-to}}
-						</td>
-					</tr>	
-				{{/each}}
-			</table>
+							</div>
+						{{/each}}
+					</div>
+			</div>
 		</div>
-		<div class="col-md-8 col-md-offset-1">
+		<div class="col-md-8">
 			{{outlet}}
 		</div>
 	</div>
