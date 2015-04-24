@@ -9,13 +9,15 @@
 					</div>
 
 					<div class="panel-body">
-						{{#each item in content}}
-							<div>
-							{{#link-to 'projects.project-id' item.id}}
-								{{item.name}}
-							{{/link-to}}
-							</div>
-						{{/each}}
+						<ul class="nav">
+							{{#each item in content}}
+								<li>
+									{{#link-to 'projects.project-id' item.id}}
+										{{item.name}}
+									{{/link-to}}
+								</li>
+							{{/each}}
+						</ul>
 					</div>
 			</div>
 		</div>
