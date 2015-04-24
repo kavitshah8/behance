@@ -1,20 +1,26 @@
-<div class="project-header">
-	<h3>{{content.name}}</h3>
-	<small>
-		{{#each item in content.fields}}
-			{{item}}
-		{{/each}}
-	</small>
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		<div class="panel-title">
+			{{content.name}}			
+		</div>
+		<small>
+			{{#each item in content.fields}}
+				{{item}}
+			{{/each}}
+		</small>		
+	</div>
+	<div class="panel-body">
+		<div class="col-md-6">
+			<img class="img-responsive" {{bind-attr src="content.covers.404"}} >
+		</div>
+
+		<div class="col-md-4 col-md-offset-2">
+			<p class="text-uppercase">Project By</p>
+			{{#each item in content.owners}}
+				<div>{{item.first_name}} {{item.last_name}}</div>
+			{{/each}}
+		</div>	
+	</div>
 </div>
 
-<div class="col-md-6">
-	<img class="img-responsive" {{bind-attr src="content.covers.404"}} >
-</div>
-
-<div class="col-md-4 col-md-offset-2">
-	<p class="text-uppercase">Project By</p>
-	{{#each item in content.owners}}
-		<div>{{item.first_name}} {{item.last_name}}</div>
-	{{/each}}
-</div>
 {{outlet}}
