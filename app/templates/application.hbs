@@ -1,7 +1,14 @@
-<div class="container">
-	<button type="button" class="btn btn-link">
-		{{#link-to 'projects'}}Projects{{/link-to}}
-	</button>
-</div>
-
+<nav class="navbar navbar-tabs">
+		<ul class="nav navbar-nav">
+			<li>{{#link-to 'application'}}Home{{/link-to}}</li>
+			<li>{{#link-to 'projects'}}Motorcycles{{/link-to}}</li>
+		</ul>
+</nav>
 {{outlet}}
+
+<div class="jumbotron">
+	<div class="container">
+	  <h1>Hello, Behance!</h1>
+	  <p><a class="btn btn-primary btn-lg" href="https://www.behance.net/" role="button">Learn more</a></p>
+	</div>
+</div>
