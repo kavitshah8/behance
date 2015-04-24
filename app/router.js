@@ -10,6 +10,7 @@ Router.map(function() {
     this.route('project-id', { path:':id' });
   });
 
+  this.route('home');
 });
 
 export default Router;
