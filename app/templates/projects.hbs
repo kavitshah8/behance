@@ -1,24 +1,43 @@
 <div class="container-fluid">
 	<div class="row-fluid">
 		<div class="col-md-3">
-			<div class="panel panel-primary">
-					<div class="panel-heading">
-						<div class="panel-title">
-								Projects
-						</div>
-					</div>
-
-					<div class="panel-body">
-						<ul class="nav">
-							{{#each item in content}}
-								<li>
-									{{#link-to 'projects.project-id' item.id}}
-										{{item.name}}
-									{{/link-to}}
-								</li>
-							{{/each}}
-						</ul>
-					</div>
+			<div class="panel-group" id="accordion" role="tablist">
+			  <div class="panel panel-primary">
+			    <div class="panel-heading" role="tab">
+			      <h4 class="panel-title">
+			        <a data-toggle="collapse" data-parent="#accordion" href="#motorcycleCollapse">
+			          Motorcycle
+			        </a>
+			      </h4>
+			    </div>
+			    <div id="motorcycleCollapse" class="panel-collapse collapse" role="tabpanel">
+			      <div class="panel-body">
+			        <ul class="nav">
+			          {{#each item in content}}
+			            <li>
+			              {{#link-to 'projects.project-id' item.id }}
+			                {{item.name}}
+			              {{/link-to}}
+			            </li>
+			          {{/each}}
+			        </ul>        
+			      </div>
+			    </div>
+			  </div>
+			  <div class="panel panel-primary">
+			  	<div class="panel-heading" role="tab">
+			  		<h4 class="panel-title">
+			  			<a data-toggle="collapse" data-parent="#accordion" href="#helpCollapse">
+			  				Help
+			  			</a>
+			  		</h4>
+			  	</div>
+			  	<div id="helpCollapse" class="panel-collapse collapse" role="tabpanel">
+			  		<div class="panel-body">
+			  			<a href="https://www.behance.net/dev/api/endpoints/">Behance API</a>
+			  		</div>
+			  	</div>
+			  </div>
 			</div>
 		</div>
 		<div class="col-md-8">
