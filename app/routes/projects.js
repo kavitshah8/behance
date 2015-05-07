@@ -9,7 +9,11 @@ export default Ember.Route.extend({
 		var query = 'motorcycle';
 		var url = "https://api.behance.net/v2/projects?q="+ query +"&client_id="+ clientID;
 
-		return ajax({url:url,type:'GET', dataType: "jsonp"}).then(function(res){	
+		// if(this.projects){
+		// 	return this.projects;
+		// }
+		
+		return this.projects = ajax({url:url,type:'GET', dataType: "jsonp"}).then(function(res){	
 			return res.projects;
     });	
 	}
