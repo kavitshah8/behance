@@ -3,7 +3,7 @@ import ajax from 'ic-ajax';
 
 export default Ember.Route.extend({
 
-	model: function(){
+	model(){
 		
 		var clientID = 'Kb9HmPuJsBPrytGERNjNZLjah7xuegFp';
 		var query = 'motorcycle';
